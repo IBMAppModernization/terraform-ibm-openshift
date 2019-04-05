@@ -24,7 +24,7 @@ variable "master_hostname_prefix" {
 }
 variable "master_flavor" {}
 variable "master_os_ref_code" {
-  default = "CENTOS_7_64"
+  default = "REDHAT_7_64"
 }
 
 variable "master_ssh_key_ids" {

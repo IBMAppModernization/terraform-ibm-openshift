@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "Execute the pre-install steps"
-#subscription-manager repos --enable="rhel-7-server-rpms"  --enable="rhel-7-server-extras-rpms"   --enable="rhel-7-server-optional-rpms"
+subscription-manager repos --enable="rhel-7-server-rpms"  --enable="rhel-7-server-extras-rpms"   --enable="rhel-7-server-optional-rpms"
 #rm -fr /var/cache/yum/*
 #yum clean all
 #yum -y update

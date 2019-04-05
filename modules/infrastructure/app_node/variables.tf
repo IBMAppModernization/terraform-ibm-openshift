@@ -23,7 +23,7 @@ variable "app_hostname_prefix" {
   default = "IBM"
 }
 variable "app_os_ref_code" {
-  default = "CENTOS_7_64"
+  default = "REDHAT_7_64"
 }
 variable "app_flavor" {}
 

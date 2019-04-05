@@ -24,7 +24,7 @@ variable "infra_hostname_prefix" {
 }
 variable "infra_flavor" {}
 variable "infra_os_ref_code" {
-  default = "CENTOS_7_64"
+  default = "REDHAT_7_64"
 }
 variable "infra_node_pub_sg"{}
 variable "infra_node_prv_sg"{}
