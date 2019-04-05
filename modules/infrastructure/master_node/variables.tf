@@ -16,7 +16,7 @@ variable "hourly_billing" {}
 # Master Node Variables
 #################################################
 variable "master_node_count" {}
-variable "master_hostname" {  
+variable "master_hostname" {
   default = "master"
 }
 variable "master_hostname_prefix" {
@@ -24,7 +24,7 @@ variable "master_hostname_prefix" {
 }
 variable "master_flavor" {}
 variable "master_os_ref_code" {
-  default = "REDHAT_7_64"
+  default = "CENTOS_7_64"
 }
 
 variable "master_ssh_key_ids" {

@@ -45,12 +45,10 @@ variable "vm_domain" {
 
 
 variable "ibm_sl_username"{
-
 }
 
 
 variable "ibm_sl_api_key"{
-
 }
 
 
@@ -60,7 +58,7 @@ variable "private_ssh_key"{
 
 variable vlan_count {
   description = "Set to 0 if using existing and 1 if deploying a new VLAN"
-  default = "1"
+  default = "0"
 }
 variable private_vlanid {
   description = "ID of existing private VLAN to connect VSIs"

@@ -2,9 +2,9 @@
 
 ######### Install OCP and its prerequisits
 
-rm -fr /var/cache/yum/*
+#rm -fr /var/cache/yum/*
 
-yum clean all
+#yum clean all
 
 yum install -y wget git net-tools bind-utils yum-utils iptables-services bridge-utils bash-completion kexec-tools sos psacct
 
@@ -14,7 +14,7 @@ yum install -y tmux
 
 yum update -y
 
-# yum install -y  openshift-ansible
+yum install -y ansible
 
 # Clone the openshift/openshift-ansible repository from GitHub, which provides the required playbooks and configuration files:
 git clone https://github.com/openshift/openshift-ansible ~/openshift-ansible

@@ -1,7 +1,7 @@
 # openshift MAIN.tf
 # This file runs each of the modules
 
-# Create a new ssh key 
+# Create a new ssh key
 resource "ibm_compute_ssh_key" "ssh_key_ose" {
   label      = "${var.ssh-label}"
   notes      = "SSH key for deploying OSE using Terraform"
@@ -141,13 +141,10 @@ module "openshift" {
   domain                  = "${var.vm_domain}"
 }
 
-module "rhn_register" {
-  source                  = "modules/infrastructure/rhn_register"
+module "epel_repo" {
+  source                  = "modules/infrastructure/epel_repo"
   master_ip_address       = "${module.masternode.master_public_ip}"
   master_private_ssh_key  = "${var.private_ssh_key}"
-  rhn_username            = "${var.rhn_username}"
-  rhn_password            = "${var.rhn_password}"
-  pool_id                 = "${var.pool_id}"
   master_count            = "${var.master_count}"
   infra_ip_address        = "${module.infranode.infra_public_ip}"
   infra_private_ssh_key   = "${var.private_ssh_key}"
@@ -156,5 +153,5 @@ module "rhn_register" {
   app_private_ssh_key     = "${var.private_ssh_key}"
   app_count               = "${var.app_count}"
   bastion_ip_address      = "${module.bastion.bastion_ip_address}"
-  bastion_private_ssh_key = "${var.private_ssh_key}" 
+  bastion_private_ssh_key = "${var.private_ssh_key}"
 }

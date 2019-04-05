@@ -42,15 +42,3 @@ variable "master_ip_address" {
 variable "master_private_ssh_key" {
 
 }
-
-variable "rhn_username"{
-
-}
-
-variable "rhn_password"{
-
-}
-
-variable "pool_id"{
-
-}

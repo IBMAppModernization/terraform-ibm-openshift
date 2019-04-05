@@ -26,9 +26,13 @@ openshift_disable_check= docker_image_availability,docker_storage,memory_availab
 # openshift_hosted_metrics_deploy=true
 
 # https://access.redhat.com/solutions/3617551
-openshift_storage_glusterfs_image="registry.access.redhat.com/rhgs3/rhgs-server-rhel7:v3.10"
-openshift_storage_glusterfs_block_image="registry.access.redhat.com/rhgs3/rhgs-gluster-block-prov-rhel7:v3.10"
-openshift_storage_glusterfs_heketi_image="registry.access.redhat.com/rhgs3/rhgs-volmanager-rhel7:v3.10"
+#openshift_storage_glusterfs_image="registry.access.redhat.com/rhgs3/rhgs-server-rhel7:v3.10"
+#openshift_storage_glusterfs_block_image="registry.access.redhat.com/rhgs3/rhgs-gluster-block-prov-rhel7:v3.10"
+#openshift_storage_glusterfs_heketi_image="registry.access.redhat.com/rhgs3/rhgs-volmanager-rhel7:v3.10"
+
+openshift_storage_glusterfs_image="gluster/gluster-centos:gluster3u10_centos7"
+openshift_storage_glusterfs_block_image="gluster/glusterblock-provisioner"
+openshift_storage_glusterfs_heketi_image="heketi/heketi"
 
 
 [masters]
