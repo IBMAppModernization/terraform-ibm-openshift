@@ -67,7 +67,7 @@ variable private_vlanid {
 
 variable public_vlanid {
   description = "ID of existing public VLAN to connect VSIs"
-  default = "25888833"
+  default = "2588833"
 }
 
 ### Flavors to be changed to actual values in '#...'
