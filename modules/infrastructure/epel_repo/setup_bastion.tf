@@ -9,18 +9,17 @@ resource "null_resource" "setup_bastion" {
   provisioner "file" {
     source      = "${path.cwd}/scripts"
     destination = "/tmp"
-   
+
   }
 
 
     provisioner "remote-exec" {
     inline = [
       "chmod +x /tmp/scripts/*",
-      "/tmp/scripts/rhn_register.sh ${var.rhn_username} ${var.rhn_password} ${var.pool_id}",
+      "/tmp/scripts/epel_repo.sh",
       "/tmp/scripts/bastion_install_ansible.sh",
     ]
-  
+
     }
 
 }
-

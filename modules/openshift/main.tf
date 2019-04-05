@@ -46,8 +46,8 @@ resource "null_resource" "deploy_cluster" {
   provisioner "remote-exec" {
     inline = [
       "chmod +x /root/*",
-      "ansible-playbook -i /root/inventory.cfg /usr/share/ansible/openshift-ansible/playbooks/prerequisites.yml",    
-      "ansible-playbook -i /root/inventory.cfg /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml",
+      "ansible-playbook -i /root/inventory.cfg /root/openshift-ansible/playbooks/prerequisites.yml",
+      "ansible-playbook -i /root/inventory.cfg /root/openshift-ansible/playbooks/deploy_cluster.yml",
     ]
   }
 }

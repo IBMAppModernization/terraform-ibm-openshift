@@ -9,8 +9,8 @@
 ansible_ssh_user=root
 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
 
-# Deploy OpenShift Enterprise 3.10
-openshift_deployment_type=openshift-enterprise
+# Deploy OpenShift Origin 3.10
+openshift_deployment_type=origin
 openshift_release= "3.10"
 openshift_enable_docker_excluder=false
 

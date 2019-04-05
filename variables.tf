@@ -4,11 +4,11 @@ variable "hourly_billing" {
 }
 
 variable "datacenter" {
-  default = "lon06"
+  default = "wdc07"
 }
 
 variable "hostname_prefix"{
-  default = "IBM-OCP"
+  default = "IBM-CDA-OCP"
 }
 
 variable "bastion_count" {
@@ -32,7 +32,7 @@ variable "storage_count" {
 }
 
 variable "ssh_public_key" {
-  default     = "~/.ssh/id_rsa.pub"
+  default     = "/mnt/id_rsa.pub"
 }
 
 variable "ssh-label" {
@@ -45,7 +45,7 @@ variable "vm_domain" {
 
 
 variable "ibm_sl_username"{
-  
+
 }
 
 
@@ -53,20 +53,9 @@ variable "ibm_sl_api_key"{
 
 }
 
-variable "rhn_username"{
-  default = ""
-}
-
-variable "rhn_password"{
-  default = ""
-}
-
-variable "pool_id"{
-   default = ""
-}
 
 variable "private_ssh_key"{
-  default     = "~/.ssh/id_rsa"
+  default     = "/mnt/id_rsa"
 }
 
 variable vlan_count {
@@ -75,12 +64,12 @@ variable vlan_count {
 }
 variable private_vlanid {
   description = "ID of existing private VLAN to connect VSIs"
-  default = "2543851"
+  default = "2588891"
 }
 
 variable public_vlanid {
   description = "ID of existing public VLAN to connect VSIs"
-  default = "2543849"
+  default = "25888833"
 }
 
 ### Flavors to be changed to actual values in '#...'

@@ -11,7 +11,7 @@ count = "${var.master_count}"
  provisioner "file" {
     source      = "${path.cwd}/scripts"
     destination = "/tmp"
-   
+
   }
 
 
@@ -19,10 +19,9 @@ count = "${var.master_count}"
     provisioner "remote-exec" {
     inline = [
       "chmod +x /tmp/scripts/*",
-      "/tmp/scripts/rhn_register.sh ${var.rhn_username} ${var.rhn_password} ${var.pool_id}",
+      "/tmp/scripts/epel_repo.sh",
       ]
-  
+
     }
 
 }
-
