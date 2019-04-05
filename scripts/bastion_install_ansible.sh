@@ -14,12 +14,12 @@ yum install -y tmux
 
 yum update -y
 
-yum -y --enablerepo=epel install ansible pyOpenSSL
+yum -y --enablerepo=epel install ansible
 
 # Clone the openshift/openshift-ansible repository from GitHub, which provides the required playbooks and configuration files:
 git clone https://github.com/openshift/openshift-ansible ~/openshift-ansible
 cd  ~/openshift-ansible
-git checkout release-3.11
+git checkout release-3.10
 cd -
 
 

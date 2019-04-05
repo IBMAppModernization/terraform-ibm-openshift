@@ -9,9 +9,9 @@
 ansible_ssh_user=root
 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
 
-# Deploy OpenShift Origin 3.11
+# Deploy OpenShift Origin 3.10
 openshift_deployment_type=origin
-openshift_release= "3.11"
+openshift_release= "3.10"
 openshift_enable_docker_excluder=false
 
 # We need a wildcard DNS setup for our public access to services, fortunately
